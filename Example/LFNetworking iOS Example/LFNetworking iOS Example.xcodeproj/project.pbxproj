@@ -1,0 +1,517 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		39B1B67019F00AC4009E0291 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 39B1B66F19F00AC4009E0291 /* main.m */; };
+		39B1B67319F00AC4009E0291 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 39B1B67219F00AC4009E0291 /* AppDelegate.m */; };
+		39B1B67619F00AC4009E0291 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39B1B67519F00AC4009E0291 /* ViewController.m */; };
+		39B1B67B19F00AC4009E0291 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39B1B67A19F00AC4009E0291 /* Images.xcassets */; };
+		39B1B68A19F00AC4009E0291 /* LFNetworking_iOS_ExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 39B1B68919F00AC4009E0291 /* LFNetworking_iOS_ExampleTests.m */; };
+		39C67C2C19F3AD8C009A314C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39C67C2919F3AD8C009A314C /* Default-568h@2x.png */; };
+		39C67C2D19F3AD8C009A314C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 39C67C2A19F3AD8C009A314C /* Default.png */; };
+		39C67C2E19F3AD8C009A314C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39C67C2B19F3AD8C009A314C /* Default@2x.png */; };
+		39C67C3119F3E021009A314C /* LFNetworkProgressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 39C67C3019F3E021009A314C /* LFNetworkProgressCell.m */; };
+		39E42B3A19F3A2980083EEC7 /* LFInstagramAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E42B3919F3A2980083EEC7 /* LFInstagramAPIClient.m */; };
+		39E42B4D19F3A3910083EEC7 /* LFNetworkDataTaskOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E42B3C19F3A3910083EEC7 /* LFNetworkDataTaskOperation.m */; };
+		39E42B4E19F3A3910083EEC7 /* LFNetworkTaskOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E42B3E19F3A3910083EEC7 /* LFNetworkTaskOperation.m */; };
+		39E42B4F19F3A3910083EEC7 /* LFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E42B4119F3A3910083EEC7 /* LFHTTPSessionManager.m */; };
+		39E42B5019F3A3910083EEC7 /* LFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E42B4319F3A3910083EEC7 /* LFURLSessionManager.m */; };
+		39E42B5119F3A3910083EEC7 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E42B4619F3A3910083EEC7 /* AFSecurityPolicy.m */; };
+		39E42B5219F3A3910083EEC7 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E42B4819F3A3910083EEC7 /* AFURLRequestSerialization.m */; };
+		39E42B5319F3A3910083EEC7 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E42B4A19F3A3910083EEC7 /* AFURLResponseSerialization.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		39B1B68419F00AC4009E0291 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 39B1B66219F00AC4009E0291 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 39B1B66919F00AC4009E0291;
+			remoteInfo = "LFNetworking iOS Example";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		39B1B66A19F00AC4009E0291 /* LFNetworking iOS Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LFNetworking iOS Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		39B1B66E19F00AC4009E0291 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39B1B66F19F00AC4009E0291 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		39B1B67119F00AC4009E0291 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		39B1B67219F00AC4009E0291 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		39B1B67419F00AC4009E0291 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		39B1B67519F00AC4009E0291 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		39B1B67A19F00AC4009E0291 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		39B1B68319F00AC4009E0291 /* LFNetworking iOS ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LFNetworking iOS ExampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		39B1B68819F00AC4009E0291 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39B1B68919F00AC4009E0291 /* LFNetworking_iOS_ExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFNetworking_iOS_ExampleTests.m; sourceTree = "<group>"; };
+		39C67C2919F3AD8C009A314C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "LFNetworking iOS Example/Default-568h@2x.png"; sourceTree = "<group>"; };
+		39C67C2A19F3AD8C009A314C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = "LFNetworking iOS Example/Default.png"; sourceTree = "<group>"; };
+		39C67C2B19F3AD8C009A314C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "LFNetworking iOS Example/Default@2x.png"; sourceTree = "<group>"; };
+		39C67C2F19F3E021009A314C /* LFNetworkProgressCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFNetworkProgressCell.h; sourceTree = "<group>"; };
+		39C67C3019F3E021009A314C /* LFNetworkProgressCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFNetworkProgressCell.m; sourceTree = "<group>"; };
+		39E42B3819F3A2980083EEC7 /* LFInstagramAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFInstagramAPIClient.h; sourceTree = "<group>"; };
+		39E42B3919F3A2980083EEC7 /* LFInstagramAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFInstagramAPIClient.m; sourceTree = "<group>"; };
+		39E42B3B19F3A3910083EEC7 /* LFNetworkDataTaskOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LFNetworkDataTaskOperation.h; path = LFNetworking/LFNetworkDataTaskOperation.h; sourceTree = "<group>"; };
+		39E42B3C19F3A3910083EEC7 /* LFNetworkDataTaskOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LFNetworkDataTaskOperation.m; path = LFNetworking/LFNetworkDataTaskOperation.m; sourceTree = "<group>"; };
+		39E42B3D19F3A3910083EEC7 /* LFNetworkTaskOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LFNetworkTaskOperation.h; path = LFNetworking/LFNetworkTaskOperation.h; sourceTree = "<group>"; };
+		39E42B3E19F3A3910083EEC7 /* LFNetworkTaskOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LFNetworkTaskOperation.m; path = LFNetworking/LFNetworkTaskOperation.m; sourceTree = "<group>"; };
+		39E42B4019F3A3910083EEC7 /* LFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LFHTTPSessionManager.h; path = LFNetworking/LFHTTPSessionManager.h; sourceTree = "<group>"; };
+		39E42B4119F3A3910083EEC7 /* LFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LFHTTPSessionManager.m; path = LFNetworking/LFHTTPSessionManager.m; sourceTree = "<group>"; };
+		39E42B4219F3A3910083EEC7 /* LFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LFURLSessionManager.h; path = LFNetworking/LFURLSessionManager.h; sourceTree = "<group>"; };
+		39E42B4319F3A3910083EEC7 /* LFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LFURLSessionManager.m; path = LFNetworking/LFURLSessionManager.m; sourceTree = "<group>"; };
+		39E42B4519F3A3910083EEC7 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
+		39E42B4619F3A3910083EEC7 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
+		39E42B4719F3A3910083EEC7 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		39E42B4819F3A3910083EEC7 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		39E42B4919F3A3910083EEC7 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		39E42B4A19F3A3910083EEC7 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		39B1B66719F00AC4009E0291 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		39B1B68019F00AC4009E0291 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		39B1B66119F00AC4009E0291 = {
+			isa = PBXGroup;
+			children = (
+				39C67C2919F3AD8C009A314C /* Default-568h@2x.png */,
+				39C67C2A19F3AD8C009A314C /* Default.png */,
+				39C67C2B19F3AD8C009A314C /* Default@2x.png */,
+				39B1B69319F00ACC009E0291 /* Vendor */,
+				39B1B66C19F00AC4009E0291 /* LFNetworking iOS Example */,
+				39B1B68619F00AC4009E0291 /* LFNetworking iOS ExampleTests */,
+				39B1B66B19F00AC4009E0291 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		39B1B66B19F00AC4009E0291 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				39B1B66A19F00AC4009E0291 /* LFNetworking iOS Example.app */,
+				39B1B68319F00AC4009E0291 /* LFNetworking iOS ExampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		39B1B66C19F00AC4009E0291 /* LFNetworking iOS Example */ = {
+			isa = PBXGroup;
+			children = (
+				39B1B67119F00AC4009E0291 /* AppDelegate.h */,
+				39B1B67219F00AC4009E0291 /* AppDelegate.m */,
+				39B1B67419F00AC4009E0291 /* ViewController.h */,
+				39B1B67519F00AC4009E0291 /* ViewController.m */,
+				39B1B67A19F00AC4009E0291 /* Images.xcassets */,
+				39B1B66D19F00AC4009E0291 /* Supporting Files */,
+				39E42B3819F3A2980083EEC7 /* LFInstagramAPIClient.h */,
+				39E42B3919F3A2980083EEC7 /* LFInstagramAPIClient.m */,
+				39C67C2F19F3E021009A314C /* LFNetworkProgressCell.h */,
+				39C67C3019F3E021009A314C /* LFNetworkProgressCell.m */,
+			);
+			path = "LFNetworking iOS Example";
+			sourceTree = "<group>";
+		};
+		39B1B66D19F00AC4009E0291 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				39B1B66E19F00AC4009E0291 /* Info.plist */,
+				39B1B66F19F00AC4009E0291 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		39B1B68619F00AC4009E0291 /* LFNetworking iOS ExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				39B1B68919F00AC4009E0291 /* LFNetworking_iOS_ExampleTests.m */,
+				39B1B68719F00AC4009E0291 /* Supporting Files */,
+			);
+			path = "LFNetworking iOS ExampleTests";
+			sourceTree = "<group>";
+		};
+		39B1B68719F00AC4009E0291 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				39B1B68819F00AC4009E0291 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		39B1B69319F00ACC009E0291 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				39E42B4C19F3A3910083EEC7 /* LFNetworking */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
+		39E42B3F19F3A3910083EEC7 /* TaskOperations */ = {
+			isa = PBXGroup;
+			children = (
+				39E42B3B19F3A3910083EEC7 /* LFNetworkDataTaskOperation.h */,
+				39E42B3C19F3A3910083EEC7 /* LFNetworkDataTaskOperation.m */,
+				39E42B3D19F3A3910083EEC7 /* LFNetworkTaskOperation.h */,
+				39E42B3E19F3A3910083EEC7 /* LFNetworkTaskOperation.m */,
+			);
+			name = TaskOperations;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		39E42B4419F3A3910083EEC7 /* NSURLSession */ = {
+			isa = PBXGroup;
+			children = (
+				39E42B4019F3A3910083EEC7 /* LFHTTPSessionManager.h */,
+				39E42B4119F3A3910083EEC7 /* LFHTTPSessionManager.m */,
+				39E42B4219F3A3910083EEC7 /* LFURLSessionManager.h */,
+				39E42B4319F3A3910083EEC7 /* LFURLSessionManager.m */,
+			);
+			name = NSURLSession;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		39E42B4B19F3A3910083EEC7 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				39E42B4519F3A3910083EEC7 /* AFSecurityPolicy.h */,
+				39E42B4619F3A3910083EEC7 /* AFSecurityPolicy.m */,
+				39E42B4719F3A3910083EEC7 /* AFURLRequestSerialization.h */,
+				39E42B4819F3A3910083EEC7 /* AFURLRequestSerialization.m */,
+				39E42B4919F3A3910083EEC7 /* AFURLResponseSerialization.h */,
+				39E42B4A19F3A3910083EEC7 /* AFURLResponseSerialization.m */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		39E42B4C19F3A3910083EEC7 /* LFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				39E42B3F19F3A3910083EEC7 /* TaskOperations */,
+				39E42B4419F3A3910083EEC7 /* NSURLSession */,
+				39E42B4B19F3A3910083EEC7 /* ThirdParty */,
+			);
+			name = LFNetworking;
+			path = ../../LFNetworking;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		39B1B66919F00AC4009E0291 /* LFNetworking iOS Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 39B1B68D19F00AC4009E0291 /* Build configuration list for PBXNativeTarget "LFNetworking iOS Example" */;
+			buildPhases = (
+				39B1B66619F00AC4009E0291 /* Sources */,
+				39B1B66719F00AC4009E0291 /* Frameworks */,
+				39B1B66819F00AC4009E0291 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LFNetworking iOS Example";
+			productName = "LFNetworking iOS Example";
+			productReference = 39B1B66A19F00AC4009E0291 /* LFNetworking iOS Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+		39B1B68219F00AC4009E0291 /* LFNetworking iOS ExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 39B1B69019F00AC4009E0291 /* Build configuration list for PBXNativeTarget "LFNetworking iOS ExampleTests" */;
+			buildPhases = (
+				39B1B67F19F00AC4009E0291 /* Sources */,
+				39B1B68019F00AC4009E0291 /* Frameworks */,
+				39B1B68119F00AC4009E0291 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				39B1B68519F00AC4009E0291 /* PBXTargetDependency */,
+			);
+			name = "LFNetworking iOS ExampleTests";
+			productName = "LFNetworking iOS ExampleTests";
+			productReference = 39B1B68319F00AC4009E0291 /* LFNetworking iOS ExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		39B1B66219F00AC4009E0291 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Wei Zhang";
+				TargetAttributes = {
+					39B1B66919F00AC4009E0291 = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+					39B1B68219F00AC4009E0291 = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = 39B1B66919F00AC4009E0291;
+					};
+				};
+			};
+			buildConfigurationList = 39B1B66519F00AC4009E0291 /* Build configuration list for PBXProject "LFNetworking iOS Example" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 39B1B66119F00AC4009E0291;
+			productRefGroup = 39B1B66B19F00AC4009E0291 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				39B1B66919F00AC4009E0291 /* LFNetworking iOS Example */,
+				39B1B68219F00AC4009E0291 /* LFNetworking iOS ExampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		39B1B66819F00AC4009E0291 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39C67C2E19F3AD8C009A314C /* Default@2x.png in Resources */,
+				39B1B67B19F00AC4009E0291 /* Images.xcassets in Resources */,
+				39C67C2D19F3AD8C009A314C /* Default.png in Resources */,
+				39C67C2C19F3AD8C009A314C /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		39B1B68119F00AC4009E0291 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		39B1B66619F00AC4009E0291 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39B1B67619F00AC4009E0291 /* ViewController.m in Sources */,
+				39E42B5119F3A3910083EEC7 /* AFSecurityPolicy.m in Sources */,
+				39E42B3A19F3A2980083EEC7 /* LFInstagramAPIClient.m in Sources */,
+				39B1B67319F00AC4009E0291 /* AppDelegate.m in Sources */,
+				39E42B5319F3A3910083EEC7 /* AFURLResponseSerialization.m in Sources */,
+				39E42B4F19F3A3910083EEC7 /* LFHTTPSessionManager.m in Sources */,
+				39E42B5019F3A3910083EEC7 /* LFURLSessionManager.m in Sources */,
+				39C67C3119F3E021009A314C /* LFNetworkProgressCell.m in Sources */,
+				39E42B4E19F3A3910083EEC7 /* LFNetworkTaskOperation.m in Sources */,
+				39E42B5219F3A3910083EEC7 /* AFURLRequestSerialization.m in Sources */,
+				39E42B4D19F3A3910083EEC7 /* LFNetworkDataTaskOperation.m in Sources */,
+				39B1B67019F00AC4009E0291 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		39B1B67F19F00AC4009E0291 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39B1B68A19F00AC4009E0291 /* LFNetworking_iOS_ExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		39B1B68519F00AC4009E0291 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 39B1B66919F00AC4009E0291 /* LFNetworking iOS Example */;
+			targetProxy = 39B1B68419F00AC4009E0291 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		39B1B68B19F00AC4009E0291 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		39B1B68C19F00AC4009E0291 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		39B1B68E19F00AC4009E0291 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "LFNetworking iOS Example/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		39B1B68F19F00AC4009E0291 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "LFNetworking iOS Example/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		39B1B69119F00AC4009E0291 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "LFNetworking iOS ExampleTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LFNetworking iOS Example.app/LFNetworking iOS Example";
+			};
+			name = Debug;
+		};
+		39B1B69219F00AC4009E0291 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "LFNetworking iOS ExampleTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LFNetworking iOS Example.app/LFNetworking iOS Example";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		39B1B66519F00AC4009E0291 /* Build configuration list for PBXProject "LFNetworking iOS Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39B1B68B19F00AC4009E0291 /* Debug */,
+				39B1B68C19F00AC4009E0291 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		39B1B68D19F00AC4009E0291 /* Build configuration list for PBXNativeTarget "LFNetworking iOS Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39B1B68E19F00AC4009E0291 /* Debug */,
+				39B1B68F19F00AC4009E0291 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		39B1B69019F00AC4009E0291 /* Build configuration list for PBXNativeTarget "LFNetworking iOS ExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39B1B69119F00AC4009E0291 /* Debug */,
+				39B1B69219F00AC4009E0291 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 39B1B66219F00AC4009E0291 /* Project object */;
+}

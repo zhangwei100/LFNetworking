@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:LFNetworking"
+      name = "LFNetworking">
+      <Group
+         location = "container:"
+         name = "TaskOperations">
+         <FileRef
+            location = "group:LFNetworking/LFNetworkDataTaskOperation.h">
+         </FileRef>
+         <FileRef
+            location = "group:LFNetworking/LFNetworkDataTaskOperation.m">
+         </FileRef>
+         <FileRef
+            location = "group:LFNetworking/LFNetworkTaskOperation.h">
+         </FileRef>
+         <FileRef
+            location = "group:LFNetworking/LFNetworkTaskOperation.m">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
+         name = "NSURLSession">
+         <FileRef
+            location = "group:LFNetworking/LFHTTPSessionManager.h">
+         </FileRef>
+         <FileRef
+            location = "group:LFNetworking/LFHTTPSessionManager.m">
+         </FileRef>
+         <FileRef
+            location = "group:LFNetworking/LFURLSessionManager.h">
+         </FileRef>
+         <FileRef
+            location = "group:LFNetworking/LFURLSessionManager.m">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:ThirdParty"
+         name = "ThirdParty">
+         <FileRef
+            location = "group:AFSecurityPolicy.h">
+         </FileRef>
+         <FileRef
+            location = "group:AFSecurityPolicy.m">
+         </FileRef>
+         <FileRef
+            location = "group:AFURLRequestSerialization.h">
+         </FileRef>
+         <FileRef
+            location = "group:AFURLRequestSerialization.m">
+         </FileRef>
+         <FileRef
+            location = "group:AFURLResponseSerialization.h">
+         </FileRef>
+         <FileRef
+            location = "group:AFURLResponseSerialization.m">
+         </FileRef>
+      </Group>
+   </Group>
+   <FileRef
+      location = "group:Example/LFNetworking iOS Example/LFNetworking iOS Example.xcodeproj">
+   </FileRef>
+</Workspace>
