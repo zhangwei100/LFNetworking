@@ -14,5 +14,7 @@ Pod::Spec.new do |s|
   s.source_files = 'LFNetworking/*', 'LFNetworking/ThirdParty/*'
   s.exclude_files = 'Example'
   
-  s.frameworks = 'Foundation', 'CoreGraphics', 'UIKit', 'MobileCoreServices', 'Security'
+  s.ios.frameworks = 'MobileCoreServices', 'CoreGraphics', 'Security'
+  s.osx.frameworks = 'CoreServices', 'Security'
+
 end
