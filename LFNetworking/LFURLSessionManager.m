@@ -71,7 +71,7 @@
 
 - (LFNetworkDataTaskOperation *)dataOperationWithRequest:(NSURLRequest *)request
                                          progressHandler:(LFURLSessionDataTaskProgressBlock)progressHandler
-                                       completionHandler:(LFURLSessionTaskDidCompleteBlock)didCompleteHandler {
+                                       completionHandler:(LFURLSessionTaskDidCompleteWithDataErrorBlock)didCompleteWithDataErrorHandler {
     
     NSParameterAssert(request);
     
@@ -79,7 +79,7 @@
     NSAssert(operation, @"%s: instantiation of NetworkDataTaskOperation failed", __FUNCTION__);
     
     operation.progressHandler = progressHandler;
-    operation.didCompleteHandler = didCompleteHandler;
+    operation.didCompleteWithDataErrorHandler = didCompleteWithDataErrorHandler;
     operation.completionQueue = self.completionQueue;
     
     [self addTaskToOperationsWithTaskOperation:operation];
@@ -89,13 +89,13 @@
 
 - (LFNetworkDataTaskOperation *)dataOperationWithURL:(NSURL *)url
                                      progressHandler:(LFURLSessionDataTaskProgressBlock)progressHandler
-                                   completionHandler:(LFURLSessionTaskDidCompleteBlock)didCompleteHandler {
+                                   completionHandler:(LFURLSessionTaskDidCompleteWithDataErrorBlock)didCompleteWithDataErrorHandler {
     
     NSParameterAssert(url);
     
     return [self dataOperationWithRequest:[NSURLRequest requestWithURL:url]
                           progressHandler:progressHandler
-                        completionHandler:didCompleteHandler];
+                        completionHandler:didCompleteWithDataErrorHandler];
 }
 
 #pragma mark -
@@ -211,7 +211,7 @@
     
     LFNetworkTaskOperation *operation = [self taskOperationWithURLSessionTask:task];
     
-    if ([operation respondsToSelector:@selector(URLSession:task:didCompleteWithError:)] && operation.didCompleteHandler) {
+    if ([operation respondsToSelector:@selector(URLSession:task:didCompleteWithError:)] && operation.didCompleteWithDataErrorHandler) {
         [operation URLSession:session task:task didCompleteWithError:error];
     } else {
         if (self.didCompleteHandler) {

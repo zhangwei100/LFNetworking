@@ -56,11 +56,11 @@
 #pragma mark NSURLSessionTaskDelegate
 
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error {
-    if (self.didCompleteHandler) {
+    if (self.didCompleteWithDataErrorHandler) {
         dispatch_sync(self.completionQueue ?: dispatch_get_main_queue(), ^{
-            self.didCompleteHandler(self, self.responseData, error);
-            self.didCompleteHandler = nil;
-            self.responseData = nil;
+            self.didCompleteWithDataErrorHandler(self, self.responseData, self.error ?: error);
+            self.didCompleteWithDataErrorHandler = nil;
+//            self.responseData = nil;
         });
     }
     
@@ -90,7 +90,7 @@
                 completionHandler(NSURLSessionResponseAllow);
             } else {
                 completionHandler(NSURLSessionResponseCancel);
-                if (self.didCompleteHandler) {
+                if (self.didCompleteWithDataErrorHandler) {
                     self.error = [NSError errorWithDomain:NSStringFromClass([self class]) code:statusCode userInfo:@{@"statusCode": @(statusCode), @"response": dataTask.response}];
                 }
             }

@@ -138,7 +138,7 @@ NSURLAuthenticationChallenge *challenge,
  *
  * @param request The `NSURLRequest`
  * @param progressHandler The block that will be called with as the data is being downloaded.
- * @param didCompleteHandler The block that will be called when task is done.
+ * @param didCompleteWithDataErrorHandler The block that will be called when task is done.
  *
  * @return Returns `LFNetworkDataTaskOperation`.
  *
@@ -152,7 +152,7 @@ NSURLAuthenticationChallenge *challenge,
 
 - (LFNetworkDataTaskOperation *)dataOperationWithRequest:(NSURLRequest *)request
                                          progressHandler:(LFURLSessionDataTaskProgressBlock)progressHandler
-                                       completionHandler:(LFURLSessionTaskDidCompleteBlock)didCompleteHandler;
+                                       completionHandler:(LFURLSessionTaskDidCompleteWithDataErrorBlock)didCompleteWithDataErrorHandler;
 
 /** Create data task operation.
  *
@@ -172,7 +172,7 @@ NSURLAuthenticationChallenge *challenge,
 
 - (LFNetworkDataTaskOperation *)dataOperationWithURL:(NSURL *)url
                                      progressHandler:(LFURLSessionDataTaskProgressBlock)progressHandler
-                                   completionHandler:(LFURLSessionTaskDidCompleteBlock)didCompleteHandler;
+                                   completionHandler:(LFURLSessionTaskDidCompleteWithDataErrorBlock)didCompleteWithDataErrorHandler;
 
 /// -----------------------------------------------
 /// @name NSOperationQueue utility methods

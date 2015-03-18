@@ -109,9 +109,10 @@
     
     // Warning: Subclass should override this method.
     
-    if (self.didCompleteHandler) {
+    if (self.didCompleteWithDataErrorHandler) {
         dispatch_sync(self.completionQueue ?: dispatch_get_main_queue(), ^{
-            self.didCompleteHandler = nil;
+            self.didCompleteWithDataErrorHandler(self, nil, error);
+            self.didCompleteWithDataErrorHandler = nil;
         });
     }
 

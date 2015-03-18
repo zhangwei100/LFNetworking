@@ -28,7 +28,7 @@
 @class LFNetworkTaskOperation;
 @class LFNetworkDataTaskOperation;
 
-typedef void(^LFURLSessionTaskDidCompleteBlock)(LFNetworkTaskOperation *operation,
+typedef void(^LFURLSessionTaskDidCompleteWithDataErrorBlock)(LFNetworkTaskOperation *operation,
                                                 NSData *data,
                                                 NSError *error);
 typedef void(^LFURLSessionTaskDidReceiveChallengeBlock)(LFNetworkTaskOperation *operation,
@@ -70,12 +70,12 @@ typedef void(^LFURLSessionTaskWillPerformHTTPRedirectionBlock)(LFNetworkTaskOper
  
  Uses the following typdef:
  
- typedef void(^LFURLSessionTaskDidCompleteBlock)(LFNetworkTaskOperation *operation,
+ typedef void(^LFURLSessionTaskDidCompleteWithDataErrorBlock)(LFNetworkTaskOperation *operation,
  NSData *data,
  NSError *error);
  */
 
-@property (nonatomic, copy) LFURLSessionTaskDidCompleteBlock didCompleteHandler;
+@property (nonatomic, copy) LFURLSessionTaskDidCompleteWithDataErrorBlock didCompleteWithDataErrorHandler;
 
 /** Did receive challenge handler block
  
