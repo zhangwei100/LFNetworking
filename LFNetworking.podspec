@@ -8,6 +8,8 @@ Pod::Spec.new do |s|
   s.source   = { :git => 'https://github.com/zhangwei100/LFNetworking.git', :tag => "0.0.1.1", :submodules => false }
   s.requires_arc = true
 
+  s.dependency 'AFNetworking', '~> 2.5.1'
+
   s.ios.deployment_target = '7.0'
   s.osx.deployment_target = '10.9'
 

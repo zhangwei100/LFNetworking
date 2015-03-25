@@ -71,6 +71,7 @@
     self.baseURL = url;
     
     self.requestSerializer = [AFHTTPRequestSerializer serializer];
+    self.responseSerializer = [AFJSONResponseSerializer serializer];
     
     return self;
 }
@@ -112,24 +113,11 @@
             
             if (success) {
                 
-                NSHTTPURLResponse *response = (NSHTTPURLResponse *)operation.task.response;
-                BOOL isJSON = NO;
-                
-                if ([response isKindOfClass:[NSHTTPURLResponse class]]) {
-                    for (NSString *headerKey in response.allHeaderFields) {
-                        if ([[headerKey lowercaseString] isEqualToString:@"content-type"]) {
-                            if ([[response.allHeaderFields[headerKey] lowercaseString] rangeOfString:@"application/json"].location != NSNotFound) {
-                                isJSON = YES;
-                            }
-                        }
-                    }
-                }
-                
-                if (isJSON) {
-                    NSError *parseError = nil;
-                    id object = [NSJSONSerialization JSONObjectWithData:data options:0 error:&parseError];
-                    if (parseError) {
-                        failure(dataTaskOperation, parseError);
+                if (self.responseSerializer) {
+                     NSError *serializationError = nil;
+                    id object = [self.responseSerializer responseObjectForResponse:operation.task.response data:data error:&serializationError];
+                    if (serializationError) {
+                        failure(dataTaskOperation, serializationError);
                     } else {
                         success(dataTaskOperation, object);
                     }
