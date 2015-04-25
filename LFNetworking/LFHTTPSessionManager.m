@@ -1,6 +1,6 @@
 //
 //  LFHTTPSessionManager.m
-//  
+//
 //
 //  Created by Wei Zhang on 09/01/14.
 //  Copyright (c) 2014 WeiZhang. All rights reserved.
@@ -32,6 +32,7 @@
 - (LFNetworkDataTaskOperation *)dataTaskOperationWithHTTPMethod:(NSString *)method
                                                       URLString:(NSString *)urlString
                                                      parameters:(id)parameters
+                                      constructingBodyWithBlock:(void (^)(id <AFMultipartFormData> formData))block
                                                         success:(void (^)(LFNetworkDataTaskOperation *taskOperation, id responseObject))success
                                                         failure:(void (^)(LFNetworkDataTaskOperation *taskOperation, NSError *error))failure;
 
@@ -79,14 +80,26 @@
 - (LFNetworkDataTaskOperation *)dataTaskOperationWithHTTPMethod:(NSString *)method
                                                       URLString:(NSString *)urlString
                                                      parameters:(id)parameters
+                                      constructingBodyWithBlock:(void (^)(id <AFMultipartFormData> formData))block
                                                         success:(void (^)(LFNetworkDataTaskOperation *, id))success
                                                         failure:(void (^)(LFNetworkDataTaskOperation *, NSError *))failure {
     NSError *serializationError = nil;
+    NSMutableURLRequest *request = nil;
     
-    NSMutableURLRequest *request = [self.requestSerializer requestWithMethod:method
-                                                                   URLString:[[NSURL URLWithString:urlString relativeToURL:self.baseURL] absoluteString]
-                                                                  parameters:parameters
-                                                                       error:&serializationError];
+    if (block) {
+        
+        request = [self.requestSerializer multipartFormRequestWithMethod:method
+                                                               URLString:urlString
+                                                              parameters:parameters
+                                               constructingBodyWithBlock:block
+                                                                   error:&serializationError];
+    } else {
+        
+        request = [self.requestSerializer requestWithMethod:method
+                                                  URLString:[[NSURL URLWithString:urlString relativeToURL:self.baseURL] absoluteString]
+                                                 parameters:parameters
+                                                      error:&serializationError];
+    }
     
     if (serializationError) {
         
@@ -102,7 +115,7 @@
     __block LFNetworkDataTaskOperation *dataTaskOperation = nil;
     
     dataTaskOperation = [self dataOperationWithRequest:request progressHandler:nil completionHandler:^(LFNetworkTaskOperation *operation, NSData *data, NSError *error) {
-
+        
         if (error) {
             
             if (failure) {
@@ -114,7 +127,7 @@
             if (success) {
                 
                 if (self.responseSerializer) {
-                     NSError *serializationError = nil;
+                    NSError *serializationError = nil;
                     id object = [self.responseSerializer responseObjectForResponse:operation.task.response data:data error:&serializationError];
                     if (serializationError) {
                         failure(dataTaskOperation, serializationError);
@@ -133,25 +146,60 @@
 
 - (LFNetworkDataTaskOperation *)POST:(NSString *)urlString
                           parameters:(id)parameters
-                             success:(void (^)(LFNetworkDataTaskOperation *, id))success
-                             failure:(void (^)(LFNetworkDataTaskOperation *, NSError *))failure {
+           constructingBodyWithBlock:(void (^)(id <AFMultipartFormData> formData))block
+                             success:(void (^)(LFNetworkDataTaskOperation *taskOperation, id responseObject))success
+                             failure:(void (^)(LFNetworkDataTaskOperation *taskOperation, NSError *error))failure {
     
-    LFNetworkDataTaskOperation *operation = [self dataTaskOperationWithHTTPMethod:@"POST" URLString:urlString parameters:parameters success:success failure:failure];
+    LFNetworkDataTaskOperation *operation = [self dataTaskOperationWithHTTPMethod:@"POST" URLString:urlString parameters:parameters constructingBodyWithBlock:block success:success failure:failure];
     
     [self addOperation:operation];
     
     return operation;
 }
 
+- (LFNetworkDataTaskOperation *)POST:(NSString *)urlString
+                          parameters:(id)parameters
+                             success:(void (^)(LFNetworkDataTaskOperation *, id))success
+                             failure:(void (^)(LFNetworkDataTaskOperation *, NSError *))failure {
+    
+    return [self POST:urlString parameters:parameters constructingBodyWithBlock:nil success:success failure:false];
+}
+
 - (LFNetworkDataTaskOperation *)GET:(NSString *)urlString
                          parameters:(id)parameters
                             success:(void (^)(LFNetworkDataTaskOperation *, id))success
                             failure:(void (^)(LFNetworkDataTaskOperation *, NSError *))failure {
-    LFNetworkDataTaskOperation *operation = [self dataTaskOperationWithHTTPMethod:@"GET" URLString:urlString parameters:parameters success:success failure:failure];
+    
+    LFNetworkDataTaskOperation *operation = [self dataTaskOperationWithHTTPMethod:@"GET" URLString:urlString parameters:parameters constructingBodyWithBlock:nil success:success failure:failure];
     
     [self addOperation:operation];
     
     return operation;
 }
+
+- (LFNetworkDataTaskOperation *)DELETE:(NSString *)urlString
+                            parameters:(id)parameters
+                               success:(void (^)(LFNetworkDataTaskOperation *taskOperation, id responseObject))success
+                               failure:(void (^)(LFNetworkDataTaskOperation *taskOperation, NSError *error))failure {
+
+    LFNetworkDataTaskOperation *operation = [self dataTaskOperationWithHTTPMethod:@"DELETE" URLString:urlString parameters:parameters constructingBodyWithBlock:nil success:success failure:failure];
+    
+    [self addOperation:operation];
+    
+    return operation;
+}
+
+- (LFNetworkDataTaskOperation *)PUT:(NSString *)urlString
+                         parameters:(id)parameters
+                            success:(void (^)(LFNetworkDataTaskOperation *taskOperation, id responseObject))success
+                            failure:(void (^)(LFNetworkDataTaskOperation *taskOperation, NSError *error))failure {
+    
+    LFNetworkDataTaskOperation *operation = [self dataTaskOperationWithHTTPMethod:@"PUT" URLString:urlString parameters:parameters constructingBodyWithBlock:nil success:success failure:failure];
+    
+    [self addOperation:operation];
+    
+    return operation;
+}
+
 
 @end

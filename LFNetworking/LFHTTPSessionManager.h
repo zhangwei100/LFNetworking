@@ -1,6 +1,6 @@
 //
 //  LFHTTPSessionManager.h
-//  
+//
 //
 //  Created by Wei Zhang on 09/01/14.
 //
@@ -98,6 +98,46 @@
                           parameters:(id)parameters
                              success:(void (^)(LFNetworkDataTaskOperation *taskOperation, id responseObject))success
                              failure:(void (^)(LFNetworkDataTaskOperation *taskOperation, NSError *error))failure;
+
+/** Prepare and initiate application/x-www-form-urlencoded request
+ *
+ * @param url          URL to use for POST request.
+ * @param parameters   `NSDictionary` for parameters to add to POST request; may be `nil` if no additional parameters. This accepts `NSString`, `NSNumber`, `NSDate`, and `NSData` objects. If the object is `NSData`, it simply converts it to a UTF8 string. If `NSDate`, this creates RFC 3339 date string (with milliseconds).
+ * @param completion   Block to be invoked when POST request completes (or fails).
+ *
+ * @return             The operation that has been started.
+ */
+- (LFNetworkDataTaskOperation *)POST:(NSString *)urlString
+                          parameters:(id)parameters
+           constructingBodyWithBlock:(void (^)(id <AFMultipartFormData> formData))block
+                             success:(void (^)(LFNetworkDataTaskOperation *taskOperation, id responseObject))success
+                             failure:(void (^)(LFNetworkDataTaskOperation *taskOperation, NSError *error))failure;
+
+/** Prepare and initiate application/x-www-form-urlencoded request
+ *
+ * @param url          URL to use for DELETE request.
+ * @param parameters   `NSDictionary` for parameters to add to POST request; may be `nil` if no additional parameters. This accepts `NSString`, `NSNumber`, `NSDate`, and `NSData` objects. If the object is `NSData`, it simply converts it to a UTF8 string. If `NSDate`, this creates RFC 3339 date string (with milliseconds).
+ * @param completion   Block to be invoked when DELETE request completes (or fails).
+ *
+ * @return             The operation that has been started.
+ */
+- (LFNetworkDataTaskOperation *)DELETE:(NSString *)urlString
+                            parameters:(id)parameters
+                               success:(void (^)(LFNetworkDataTaskOperation *taskOperation, id responseObject))success
+                               failure:(void (^)(LFNetworkDataTaskOperation *taskOperation, NSError *error))failure;
+
+/** Prepare and initiate application/x-www-form-urlencoded request
+ *
+ * @param url          URL to use for PUT request.
+ * @param parameters   `NSDictionary` for parameters to add to POST request; may be `nil` if no additional parameters. This accepts `NSString`, `NSNumber`, `NSDate`, and `NSData` objects. If the object is `NSData`, it simply converts it to a UTF8 string. If `NSDate`, this creates RFC 3339 date string (with milliseconds).
+ * @param completion   Block to be invoked when PUT request completes (or fails).
+ *
+ * @return             The operation that has been started.
+ */
+- (LFNetworkDataTaskOperation *)PUT:(NSString *)urlString
+                         parameters:(id)parameters
+                            success:(void (^)(LFNetworkDataTaskOperation *taskOperation, id responseObject))success
+                            failure:(void (^)(LFNetworkDataTaskOperation *taskOperation, NSError *error))failure;
 
 /**
  Creates and runs an `NSURLSessionDataTask` with a `GET` request.
