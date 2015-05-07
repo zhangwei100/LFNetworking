@@ -130,7 +130,9 @@
                     NSError *serializationError = nil;
                     id object = [self.responseSerializer responseObjectForResponse:operation.task.response data:data error:&serializationError];
                     if (serializationError) {
-                        failure(dataTaskOperation, serializationError);
+                        if (failure) {
+                            failure(dataTaskOperation, serializationError);
+                        }
                     } else {
                         success(dataTaskOperation, object);
                     }
