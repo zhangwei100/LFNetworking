@@ -164,7 +164,7 @@
                              success:(void (^)(LFNetworkDataTaskOperation *, id))success
                              failure:(void (^)(LFNetworkDataTaskOperation *, NSError *))failure {
     
-    return [self POST:urlString parameters:parameters constructingBodyWithBlock:nil success:success failure:false];
+    return [self POST:urlString parameters:parameters constructingBodyWithBlock:nil success:success failure:failure];
 }
 
 - (LFNetworkDataTaskOperation *)GET:(NSString *)urlString
