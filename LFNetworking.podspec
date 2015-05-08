@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
   s.name     = 'LFNetworking'
-  s.version  = '0.0.5'
+  s.version  = '0.0.6'
   s.license  = 'MIT'
   s.summary  = 'A lightweight networking framework.'
   s.homepage = 'https://github.com/zhangwei100/LFNetworking'
   s.authors  = { 'Wei Zhang' => 'zhangwei100@gmail.com' }
-  s.source   = { :git => 'https://github.com/zhangwei100/LFNetworking.git', :tag => "0.0.5", :submodules => false }
+  s.source   = { :git => 'https://github.com/zhangwei100/LFNetworking.git', :tag => "0.0.6", :submodules => false }
   s.requires_arc = true
 
   s.dependency 'AFNetworking', '~> 2.5.1'
