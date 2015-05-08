@@ -89,7 +89,7 @@
     if (block) {
         
         request = [self.requestSerializer multipartFormRequestWithMethod:method
-                                                               URLString:urlString
+                                                               URLString:[[NSURL URLWithString:urlString relativeToURL:self.baseURL] absoluteString]
                                                               parameters:parameters
                                                constructingBodyWithBlock:block
                                                                    error:&serializationError];
